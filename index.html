@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Tractian FrontEnd Challenge</title>
+
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link href='http://fonts.googleapis.com/css?family=Inter' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+		<header>
+			<div class="header-left"><a href="#" alt="home link"><img src="assets/logo/logo.png" alt="logo tractian"></a></div><div class="header-right"><div id="companies_render" class="flex-companies"></div></div>
+		</header>
+		<main>
+			<div class="main-content">
+				<div class="title-section">
+					<div class="page-title">
+						<h1>Ativos&nbsp;<span id="select_unit_name"></span></h1>
+					</div>
+					<div class="page-filters">
+						<div class="flex-companies">
+							<div>
+								<button class="filter-button" onclick="changeFiltersButtonSelectionColor(this, 'critical')">
+									<div class="filter-icon">
+										<img src="assets/icons/warning.png" alt="Warning icon">
+									</div>
+									<div class="filter-name">
+										Crítico
+									</div>
+								</button>
+							</div>
+							<div>
+								<button class="filter-button" onclick="changeFiltersButtonSelectionColor(this, 'energy')">
+									<div class="filter-icon">
+										<img src="assets/icons/bolt.png" alt="Bolt icon">
+									</div>
+									<div class="filter-name">
+										Sensor de Energia
+									</div>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<div class="left-content">
+						<div class="search-input">
+							<input type="text" placeholder="Buscar Ativo ou Local" id="text_filter_input"><div class="search-input-image">
+								<img src="assets/icons/Search.png" alt="Search icon">
+							</div>
+						</div>
+						<hr>
+						
+						<section class="folder-section">
+							<div class="folder-section-pd" id="tree_renderer">
+								<p>Select a company to load the tree view</p>
+							</div>
+						</section>
+					</div>
+					<div class="right-content" id="content_renderer">
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
